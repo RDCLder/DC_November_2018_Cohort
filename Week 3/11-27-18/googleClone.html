@@ -1,0 +1,95 @@
+<!-- Google Search Page Clone -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Clone</title>
+    <style>
+        .topLeft {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 8%;
+            width: 10%;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .topRight {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            height: 8%;
+            width: 10%;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+
+        .centralWrap {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .centerLogo {
+            display: block;
+            top: 35%;
+        }
+
+        .microphone {
+            position: absolute;
+            top: 82.5%;
+            left: 86.5%;
+            /* background: url('images/microphone.png') no-repeat; */
+            height: 22px;
+            width: 22px;
+            z-index: 10;
+        }
+
+        .searchButtons {
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="topLeft">
+        <a href="">About</a>
+        <a href="">Store</a>
+    </div>
+    <div class="topRight">
+        <a href="">Gmail</a>
+        <a href="">Images</a>
+    </div>
+    <!-- <center> -->
+        <div class="centralWrap">
+            <center>
+                <img src = "images/google_logo.png" alt = "Google Doodle">
+                <form role="search" method="get" id="searchform" class="searchform test" action="http://www.google.co.uk/search?hl=en-GB&source=hp&q=">
+                    <div id="searchBar">
+                        <label class="screen-reader-text" for="s"></label>
+                        <input type="text" value="" name="q" id="s" size="75%">
+                    </div>
+                </form>
+                <img src = "images/microphone.png" alt = "Microphone" class = "microphone">
+                <input value="Google Search" aria-label="Google Search" name="btnK" type="submit" class="searchButtons">
+                <input value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" name="btnI" type="submit" jsaction="sf.lck" class="searchButtons">
+            </center>
+        </div>
+    <!-- </center> -->
+</body>
+
+</html>

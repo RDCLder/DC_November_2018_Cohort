@@ -1,0 +1,110 @@
+<!-- Mondrian Mosaic -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mondrian Mosaic</title>
+    
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items:stretch;
+            border: solid black 3px;
+        }
+        .flexContainer{
+            display:flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: stretch;
+            background-color: green;
+            color: red;
+            
+        }
+        .flexContainerColumn {
+            display:flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: stretch;
+            background-color: green;
+            color: red;
+            
+        }
+        .h100{
+            height: 100%;
+        }
+        .flex1{
+            
+            flex-grow: 1;
+             
+        }
+        .flex2{
+            
+            flex-grow: 2;
+        }
+        .flex3{
+            
+            flex-grow:3;
+        }
+        .flex4{
+            
+            flex-grow: 4;
+        }
+        .cRed{
+            background-color: red;
+            border: solid black 3px;
+        }
+        .cYellow{
+            background-color: yellow;
+            border: solid black 3px;
+        }
+        .cGreen{
+            background-color: green;
+            border: solid black 3px;
+        }
+        .cWhite{
+            background-color: white;
+            border: solid black 3px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="flex1 cYellow">
+                
+            <div class="flexContainerColumn">
+                <div class="flexContainer">
+            
+                    <div class="flex1 cWhite"></div>
+                    <div class="flex4 cWhite"></div>
+                    <div class="flex3 cYellow"></div>
+                </div>
+                <!--end of flexContainer -->
+            
+                <div class="flexContainer">
+                    <div class="flex1 cRed"></div>
+                </div>
+                <!-- end of flexContainer -->
+
+                <div class="flexContainer">
+                        <div class="flex1 cWhite"></div>
+                    </div>
+                    <!-- end of flexContainer -->
+            </div><!--vertical container-->
+        </div>
+
+        <div class="flex1 cRed">
+
+        </div>
+        <div class="flex1 cGreen">
+
+        </div>
+    </div>
+</body>
+</html>

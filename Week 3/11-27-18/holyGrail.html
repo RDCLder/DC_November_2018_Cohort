@@ -1,0 +1,79 @@
+<!-- Positioning Exercise: Holy Grail -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Holy Grail</title>
+    <style>
+
+        .wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .header {
+            background-color: bisque;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            width: 100%;
+            height: 10%;
+            display: block;
+        }
+
+        .sidebar {
+            background-color: wheat;
+            position: absolute;
+            left: 0%;
+            top: 10%;
+            width: 20%;
+            height: 80%;
+            display: block;
+        }
+        
+        .main {
+            background-color: antiquewhite;
+            position: absolute;
+            left: 20%;
+            top: 10%;
+            width: 60%;
+            height: 80%;
+            display: block;
+        }
+
+        .footer {
+            background-color: bisque;
+            position: absolute;
+            left: 0%;
+            top: 90%;
+            width: 100%;
+            height: 10%;
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class = "header">
+            <h1>Header: 10%</h1>
+        </div>
+        <div class = "sidebar">
+            <h1>Sidebar: 80%, 20%</h1>
+        </div>
+        <div class = "main">
+            <h1>Main: 80%, 60%</h1>
+        </div>
+        <div class = "footer">
+            <h1>Footer: 60%</h1>
+        </div>
+    </div>
+</body>
+</html>

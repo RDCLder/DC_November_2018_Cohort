@@ -1,0 +1,182 @@
+<!-- Chessboard -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chessboard</title>
+
+    <style>
+
+    .board {
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+        width: 600px;
+    }
+
+    .space1 {
+        background-color: bisque;
+        height: 12.5%;
+        width: 12.5%;
+    }
+
+    .space2 {
+        background-color: peru;
+        height: 12.5%;
+        width: 12.5%;
+    }
+    
+    .pieces {
+        position: absolute;
+        left: 26.3%;
+        top: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+        width: 600px;
+        z-index: 1;
+    }
+
+    .middleSpace {
+        height: 50%;
+        width: 100%;
+    }
+
+    img {
+        position: relative;
+        height: 12.5%;
+        width: 10.5%;
+        margin-left: 1%;
+        margin-right: 1%;
+        z-index: 1;
+    }
+
+    </style>
+
+</head>
+<body>
+    <center>
+    <div class="board">
+
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+        <div class="space2"></div>
+        <div class="space1"></div>
+
+    </div>
+
+    <div class="pieces">
+
+        <img src="images/bR.png" alt="Black Rook">
+        <img src="images/bN.png" alt="Black Knight">
+        <img src="images/bB.png" alt="Black Bishop">
+        <img src="images/bK.png" alt="Black King">
+        <img src="images/bQ.png" alt="Black Queen">
+        <img src="images/bB.png" alt="Black Bishop">
+        <img src="images/bN.png" alt="Black Knight">
+        <img src="images/bR.png" alt="Black Rook">
+
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+        <img src="images/bP.png" alt="Black Pawn">
+
+        <div class="middleSpace"></div>
+
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+        <img src="images/wP.png" alt="White Pawn">
+
+        <img src="images/wR.png" alt="White Rook">
+        <img src="images/wN.png" alt="White Knight">
+        <img src="images/wB.png" alt="White Bishop">
+        <img src="images/wK.png" alt="White King">
+        <img src="images/wQ.png" alt="White Queen">
+        <img src="images/wB.png" alt="White Bishop">
+        <img src="images/wN.png" alt="White Knight">
+        <img src="images/wR.png" alt="White Rook">
+
+    </div>
+
+    </center>
+</wody>
+</html>

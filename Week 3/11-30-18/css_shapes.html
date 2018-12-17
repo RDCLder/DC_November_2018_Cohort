@@ -1,0 +1,127 @@
+<!-- CSS Shapes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Shapes</title>
+
+    <style>
+    
+    .containerAll {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        width: 100%;
+    }
+
+    .container1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin: 30px;
+    }
+
+    .triangle-up {
+        height: 0;
+        width: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+    }
+
+    .square {
+        background-color: red;
+        height: 100px;
+        width: 100px;
+    }
+
+    .oval {
+        background-color: red;
+        height: 180 px;
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    .triangleDown {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid red;
+    }
+    
+    .rightTriangle {
+        height: 0;
+        width: 0;
+        border-left: 120px solid red;
+        border-top: 80px solid transparent;
+    }
+
+    .container2 {
+        width: 100%;
+        margin: 30px;
+    }
+
+    .sixPointStar1 {
+        position: relative;
+        top: 70px;
+        height: 0;
+        width: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 104px solid red;
+        z-index: 1
+    }
+
+    .sixPointStar2 {
+        height: 0;
+        width: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-top: 104px solid red;
+        z-index: 2
+    }
+
+    .pacman {
+        width: 0px; height: 0px;
+        border-right: 60px solid transparent;
+        border-top: 60px solid yellow;
+        border-left: 60px solid yellow;
+        border-bottom: 60px solid yellow;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px; 
+        border-bottom-left-radius: 60px; 
+        border-bottom-right-radius: 60px; 
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="containerAll">
+
+        <div class="container1">
+            <div class="triangle-up"></div>
+            <div class="square"></div>
+            <div class="oval"></div>
+            <div class="triangleDown"></div>
+            <div class="rightTriangle"></div>
+        </div>
+
+        <div class="container2">
+            <div class="sixPointStar1"></div>
+            <div class="sixPointStar2"></div>
+        </div>
+
+        <div class="pacman"></div>
+
+    </div>
+
+</body>
+</html>
