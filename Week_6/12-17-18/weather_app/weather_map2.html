@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <!-- <div style = "border: solid black">
+        <h1>
+            The Weather Channel
+        </h1>
+        <h2 id = "temp">
+        </h2>
+    </div> -->
+
+    <div class="row align-items-md-center" style = "background: darkblue; height: 120px; margin-left: 20px;">
+        <h1 style = "color: white; margin-left: 20px;">
+            The Weather Channel
+        </h1>
+    </div>
+    <div id = "cities" class="row" style = "margin: 20px;">
+        <!-- <h2 id = "houston" style = "margin-left: 20px;"></h2> -->
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <!-- jQuery Script -->
+    <script>
+        $(function() {
+
+            var houstonURL = "http://api.openweathermap.org/data/2.5/weather?q=Houston,Texas";
+            var austinURL = "http://api.openweathermap.org/data/2.5/weather?q=Austin,Texas";
+            var dallasURL = "http://api.openweathermap.org/data/2.5/weather?q=Dallas,Texas";
+            var URL = [houstonURL, austinURL, dallasURL];
+            var apiKey = "75827c10371a1db29486fee47fff7f20";
+
+            for (var i = 0; i < length.URL; i ++) {
+                $.get(URL[i] + "&appid=" + apiKey
+                ).done((result) => {
+                    let tempC = Math.floor(result.main.temp - 273.15);
+                    let tempF = Math.floor(tempC * 1.8 + 32);
+                    let $h2 = $("<h2>");
+                    $h2.css("margin-left", "20px");
+                    $h2.text("City: " + tempF + " °F | " + tempC + " °C");
+                    $("#cities").append($h2);
+                    // $("#cities").text("City: " + tempF + " °F");
+                })
+            }
+        });
+    </script>
+    <!-- End of jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

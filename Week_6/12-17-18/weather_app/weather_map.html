@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Texas Weather</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        
+        .row {
+            border-bottom: solid black;
+        }
+
+    </style>
+  </head>
+  <body>
+    
+    <!-- <div style = "border: solid black">
+        <h1>
+            The Weather Channel
+        </h1>
+        <h2 id = "temp">
+        </h2>
+    </div> -->
+
+    <div class="row align-items-md-center" style = "background: darkblue; height: 120px; margin-left: 20px;">
+        <h1 style = "color: white; margin-left: 20px;">
+            The Texas Weather Channel
+        </h1>
+    </div>
+    <div class="row align-items-md-center" style = "margin: 30px;">
+        <div id = "houstonIcon" class = "col-2" style = "margin-right: 0px;">
+        </div>
+        <div class = "col">
+            <h2 id = "houston" style = "margin-left: 20px;"></h2>
+        </div>
+    </div>
+    <div class="row align-items-md-center" style = "margin: 30px;">
+        <div id = "austinIcon" class = "col-2" style = "margin-right: 0px;">
+        </div>
+        <div class = "col">
+            <h2 id = "austin" style = "margin-left: 20px;"></h2>
+        </div>
+    </div>
+    <div class="row align-items-md-center" style = "margin: 30px;">
+        <div id = "dallasIcon" class = "col-2" style = "margin-right: 0px;">
+        </div>
+        <div class = "col">
+            <h2 id = "dallas" style = "margin-left: 20px;"></h2>
+        </div>
+    </div>
+    <div class="row align-items-md-center" style = "margin: 30px;">
+        <div id = "sanAntonioIcon" class = "col-2" style = "margin-right: 0px;">
+        </div>
+        <div class = "col">
+            <h2 id = "sanAntonio" style = "margin-left: 20px;"></h2>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <!-- jQuery Script -->
+    <script>
+        $(function() {
+
+            var houstonURL = "http://api.openweathermap.org/data/2.5/weather?q=Houston,Texas";
+            var austinURL = "http://api.openweathermap.org/data/2.5/weather?q=Austin,Texas";
+            var dallasURL = "http://api.openweathermap.org/data/2.5/weather?q=Dallas,Texas";
+            var sanAntonioURL = "http://api.openweathermap.org/data/2.5/weather?q=San,Antonio,Texas";
+            var apiKey = "75827c10371a1db29486fee47fff7f20";
+
+            $.get(houstonURL + "&appid=" + apiKey
+            ).done((result) => {
+                var tempC = Math.floor(result.main.temp - 273.15);
+                var tempF = Math.floor(tempC * 1.8 + 32);
+                var weather = result.weather[0].main;
+        
+                let $img = $("<img>");
+                if (weather == "Clear") {
+                    $img.attr("src", "images/sunny.jpg");
+                }
+                else if (weather == "Cloudy") {
+                    $img.attr("src", "images/cloudy.jpg");
+                }
+                // else if (weather == "") {
+                //     $img.attr("src", "images/partly_cloudy.jpg");
+                // }
+                else {
+                    $img.attr("src", "images/partly_cloudy.jpg");
+                }
+
+                $("#houstonIcon").append($img);
+                $("#houston").text("Houston: " + tempF + " °F | " + tempC + " °C");
+            })
+
+            $.get(austinURL + "&appid=" + apiKey
+            ).done((result) => {
+                var tempC = Math.floor(result.main.temp - 273.15);
+                var tempF = Math.floor(tempC * 1.8 + 32);
+                var weather = result.weather[0].main;
+
+                let $img = $("<img>");
+                if (weather == "Clear") {
+                    $img.attr("src", "images/sunny.jpg");
+                }
+                else if (weather == "Cloudy") {
+                    $img.attr("src", "images/cloudy.jpg");
+                }
+                // else if (weather == "") {
+                //     $img.attr("src", "images/partly_cloudy.jpg");
+                // }
+                else {
+                    $img.attr("src", "images/partly_cloudy.jpg");
+                }
+
+                $("#austinIcon").append($img);
+                $("#austin").text("Austin: " + tempF + " °F | " + tempC + " °C");
+            })
+
+            $.get(dallasURL + "&appid=" + apiKey
+            ).done((result) => {
+                var tempC = Math.floor(result.main.temp - 273.15);
+                var tempF = Math.floor(tempC * 1.8 + 32);
+                var weather = result.weather[0].main;
+
+                let $img = $("<img>");
+                if (weather == "Clear") {
+                    $img.attr("src", "images/sunny.jpg");
+                }
+                else if (weather == "Cloudy") {
+                    $img.attr("src", "images/cloudy.jpg");
+                }
+                // else if (weather == "") {
+                //     $img.attr("src", "images/partly_cloudy.jpg");
+                // }
+                else {
+                    $img.attr("src", "images/partly_cloudy.jpg");
+                }
+
+                $("#dallasIcon").append($img);
+                $("#dallas").text("Dallas: " + tempF + " °F | " + tempC + " °C");
+            })
+
+            $.get(sanAntonioURL + "&appid=" + apiKey
+            ).done((result) => {
+                var tempC = Math.floor(result.main.temp - 273.15);
+                var tempF = Math.floor(tempC * 1.8 + 32);
+                var weather = result.weather[0].main;
+
+                let $img = $("<img>");
+                if (weather == "Clear") {
+                    $img.attr("src", "images/sunny.jpg");
+                }
+                else if (weather == "Cloudy") {
+                    $img.attr("src", "images/cloudy.jpg");
+                }
+                // else if (weather == "") {
+                //     $img.attr("src", "images/partly_cloudy.jpg");
+                // }
+                else {
+                    $img.attr("src", "images/partly_cloudy.jpg");
+                }
+
+                $("#sanAntonioIcon").append($img);
+                $("#sanAntonio").text("San Antonio: " + tempF + " °F | " + tempC + " °C");
+            })
+
+        });
+    </script>
+    <!-- End of jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
