@@ -36,7 +36,7 @@
 //         }
 //         console.log(`IP Address: ${address}\nFamily: ${family}`);
 //     });
-    // rl.close();
+// rl.close();
 
 // });
 
@@ -53,7 +53,7 @@
 // });
 
 // rl.question("Enter a file to read: ", (answer) => {
-    
+
 //     var file1 = answer;
 
 //     rl.question("Enter the file to create: ", (answer) => {
@@ -61,13 +61,13 @@
 //         var file2 = answer;
 
 //         fs.readFile(file1, function (error, buffer) {
-    
+
 //             if (error) {
 //               console.error(error.message);
 //               return;
 //             }
 //             const contents = buffer.toString().toUpperCase();
-        
+
 //             fs.writeFile(file2, contents, function (error) {
 //               if (error) {
 //                 console.error(error.message);
@@ -75,7 +75,7 @@
 //               }
 //               console.log(`Saved as ${file2}!`);
 //             });
-        
+
 //         });
 //     });
 //     rl.close();
@@ -85,56 +85,62 @@
 
 // Save a Web page
 
-const request = require("request");
-const readline = require("readline");
-const fs = require("fs");
+// const request = require("request");
+// const readline = require("readline");
+// const fs = require("fs");
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-rl.question("Enter the website's URL: ", (URL) => {
-    request.get(URL, (error, response, body) => {
-        if (error) {
-            console.error(error.message);
-            return;
-        }
-        rl.question("Enter the file name: ", (filename) => {
-            rl.close();
-            fs.writeFile(filename, body, (error) => {
-                if (error) {
-                    console.error(error.message);
-                    return;
-                }
-                console.log(`Saved as ${filename}!`);
-            });
-        })
-    })
-
-    // rl.question("Enter the file name: ", (answer) => {
-
-    //     rl.close();
-    //     const filename = answer;
-        
-    //     request.get(URL, (error, response, body) => {
-    //         if (error) {
-    //             console.error(error.message);
-    //             return;
-    //         }
-    //         fs.writeFile(filename, body, (error) => {
-    //             if (error) {
-    //                 console.error(error.message);
-    //                 return;
-    //             }
-    //             console.log(`Saved as ${filename}!`);
-    //         });
-    //     })
-    // })
-});
+// rl.question("Enter the website's URL: ", (URL) => {
+//     request.get(URL, (error, response, body) => {
+//         if (error) {
+//             console.error(error.message);
+//             return;
+//         }
+//         rl.question("Enter the file name: ", (filename) => {
+//             rl.close();
+//             fs.writeFile(filename, body, (error) => {
+//                 if (error) {
+//                     console.error(error.message);
+//                     return;
+//                 }
+//                 console.log(`Saved as ${filename}!`);
+//             });
+//         })
+//     })
+// });
 
 // ----------------------------------------------------------------------------------------
 
 // Challenge: Resize an Image
 
-// Will Do Later...
+const request = require("request");
+const fs = require('fs')
+    , gm = require('gm').subClass({ imageMagick: true });
+
+const options = {
+    url: "https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png",
+    encoding: null
+};
+
+const path = "resized.png";
+
+request(options, (error, response, imageData) => {
+    if (error) {
+        console.error(error.message);
+        return;
+    }
+    gm(imageData)
+    .resize(240, 240)
+    .noProfile()
+    .write(path, (error) => {
+        if (error) {
+            console.error(error.message);
+            return;
+        }
+        console.log(``);
+    });
+});
