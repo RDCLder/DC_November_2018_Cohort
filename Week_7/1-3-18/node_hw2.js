@@ -141,6 +141,6 @@ request(options, (error, response, imageData) => {
             console.error(error.message);
             return;
         }
-        console.log(``);
+        console.log(`Image saved as ${path}.`);
     });
 });
