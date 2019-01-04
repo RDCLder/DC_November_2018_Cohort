@@ -20,14 +20,23 @@
     <script>
     $(function() {
 
-        var url = "https://anapioficeandfire.com/api/characters/583";
+        var book1 = "https://anapioficeandfire.com/api/books/1";
+        var book2 = "https://anapioficeandfire.com/api/books/2";
+        var book3 = "https://anapioficeandfire.com/api/books/3";
+        var book4 = "https://anapioficeandfire.com/api/books/4";
+        var book5 = "https://anapioficeandfire.com/api/books/5";
 
-        $.get(url
-            ).done((result) => {
-                
-                
+        var allBooks = [book1, book2, book3, book4, book5];
 
-            })
+        for (let book of allBooks) {
+          $.get(url).done((result) => {
+
+            let characters = result.characters;
+            
+
+          });
+
+        }
 
     }); 
     </script>
