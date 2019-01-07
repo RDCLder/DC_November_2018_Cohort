@@ -1,0 +1,13 @@
+
+.header {
+    background-color: navy;
+    border: solid black;
+}
+
+.container {
+    display: inline-flex;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
