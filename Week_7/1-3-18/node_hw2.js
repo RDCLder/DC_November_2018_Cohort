@@ -133,6 +133,7 @@ request(options, (error, response, imageData) => {
         console.error(error.message);
         return;
     }
+    console.log(imageData);
     gm(imageData)
     .resize(240, 240)
     .noProfile()
