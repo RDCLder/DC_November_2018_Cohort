@@ -1,0 +1,131 @@
+{
+    "coldplay": {
+        "members": [
+            "Chris Martin",
+            "Jonny Buckland",
+            "Guy Berryman",
+            "Will Champion"
+        ],
+        "pictures": [
+            "chris_martin",
+            "jonny_buckland",
+            "guy_berryman",
+            "will_champion"
+        ],
+        "locations": [
+            "London",
+            "Las Angeles",
+            "Manchester",
+            "New York",
+            "Paris"
+        ],
+        "albums": [
+            "Parachutes",
+            "A Rush of Blood to the Head",
+            "X&Y",
+            "Viva la Vida or Death and All His Friends",
+            "Mylo Xyloto",
+            "Ghost Stories",
+            "A Head Full of Dreams"
+        ],
+        "band": "Coldplay",
+        "picturesPath": "coldplay"
+    },
+    "onerepublic": {
+        "members": [
+            "Ryan Tedder",
+            "Zach Filkins",
+            "Drew Brown",
+            "Brent Kutzle",
+            "Eddie Fisher"
+        ],
+        "pictures": [
+            "ryan_tedder",
+            "zach_filkins",
+            "drew_brown",
+            "brent_kutzle",
+            "eddie_fisher"
+        ],
+        "locations": [
+            "Los Angeles",
+            "Philadelphia",
+            "New York",
+            "Chicago",
+            "London"
+        ],
+        "albums": [
+            "Dreaming Out Loud",
+            "Waking Up",
+            "Native",
+            "Oh My My"
+        ],
+        "band": "OneRepublic",
+        "picturesPath": "onerepublic"
+    },
+    "imaginedragons": {
+        "members": [
+            "Dan Reynolds",
+            "Wayne Sermon",
+            "Ben McKee",
+            "Daniel Platzman"
+        ],
+        "pictures": [
+            "dan_reynolds",
+            "wayne_sermon",
+            "ben_mckee",
+            "daniel_platzman"
+        ],
+        "locations": [
+            "Los Angeles",
+            "Las Vegas",
+            "Salt Lake City",
+            "SF Bay Area",
+            "San Diego"
+        ],
+        "albums": [
+            "Night Visions",
+            "Smoke + Mirrors",
+            "Evolve",
+            "Origins"
+        ],
+        "band": "Imagine Dragons",
+        "picturesPath": "imaginedragons"
+    },
+    "maroon5": {
+        "members": [
+            "Adam Levine",
+            "Jesse Carmichael",
+            "Mickey Madden",
+            "James Valentine",
+            "Matt Flynn",
+            "PJ Morton",
+            "Sam Farrar"
+        ],
+        "pictures": [
+            "adam_levine",
+            "jesse_carmichael",
+            "mickey_madden",
+            "james_valentine",
+            "matt_flynn",
+            "pj_morton",
+            "sam_farrar"
+        ],
+        "locations": [
+            "Las Angeles",
+            "Philadelphia",
+            "London",
+            "Las Vegas",
+            "New York"
+        ],
+        "albums": [
+            "Songs About Jane",
+            "It Won't Be Soon Before Long",
+            "Hands All Over",
+            "Overexposed",
+            "V",
+            "Red Pill Blues"
+        ],
+        "band": "Maroon 5",
+        "picturesPath": "maroon5"
+    }
+}

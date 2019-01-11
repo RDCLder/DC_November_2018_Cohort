@@ -1,0 +1,132 @@
+/* Video Header */
+
+header {
+    position: relative;
+    background-color: black;
+    height: 500px;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Main */
+
+#title {
+    background-color: navy;
+    height: 80px;
+}
+
+#members {
+    flex-wrap: wrap;
+    background-color: ghostwhite;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#albums, #locations {
+    flex-direction: column;
+    background-color: ghostwhite;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    position: relative;
+    color: white;
+    margin: auto;
+    size: 40px;
+}
+
+h2 {
+    color: white;
+    margin: auto;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Feedback */
+
+.feedback, .feedback-form-title {
+    font-size: 2rem;
+}
+
+.feedback-form {
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+}
+
+.feedback-title {
+    font-size: 0.8em;
+    /* font-weight: 100; */
+}
+
+.feedback-name {
+    font-size: 0.5em;
+    /* font-weight: 100; */
+}
+
+.feedback-message {
+    font-size: 0.5em;
+    line-height: 120%;
+    margin-top: 5px;
+}
+
+.feedback-item {
+    border-bottom: 1px solid gray;
+    padding: 8px 0;
+}
+
+.feedback-item:last-of-type {
+    border-bottom: none;
+}
