@@ -7,8 +7,15 @@
 
 <body>
 
+    <% include partials/templates/navbar.ejs %>
+
     <img src="/media/background.jpg" style="width: 100%;">
-    <h1 class="centered" style="font-size: 10vw;"> <%= pageTitle %> </h1>
+    <h1 class="centered"> <%= pageTitle %> </h1>
+
+</div>
+<!-- Closing tag for navbar partial template -->
+
+    <div class="overlay"></div>
 
     <% include partials/templates/jsdefaults.ejs %>
 </body>

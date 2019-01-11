@@ -7,47 +7,39 @@
 
 <body>
 
-    <div class="row" id="title"><h1>NAVBAR GOES HERE!</h1></div>
-    <header>
-        <div class="overlay"></div>
+    <% include partials/templates/navbar.ejs %>
+
+    <header class="d-flex">
+        <div class="mediaOverlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="/media/<%= picturesPath %>/<%= picturesPath %>.mp4" type="video/mp4">
         </video>
-        <div class="container h-100">
-            <div class="d-flex text-center h-100">
-                <div class="my-auto w-100 text-white">
-                    <h1 style="font-size: 10vw;"> <%= band %> </h1>
-                </div>
-            </div>
-        </div>
+        <h1 class="centered"><%= band %></h1>
     </header>
+    <!-- End of Video Header -->
 
-    <!-- <img src="/media/<%= picturesPath %>/<%= picturesPath %>.jpg" style="width: 100%">
-    <h1 class="centered" style="font-size: 15vw;">
-        <%= band %>
-    </h1> -->
-
-    <div class="row justify-content-md-center" id="title">
+    <div class="row justify-content-md-center m-0 p-0" id="title">
         <h2>Members</h2>
     </div>
 
-    <div class="row" id="members">
+    <div class="row m-0 p-0" id="members" style="width: 100%;">
         <% for (i = 0; i < members.length; i ++) { %>
-        <div class="col justify-content-center">
-            <h3>
-                <%= members[i] %>
-            </h3>
-            <img src="/media/<%= picturesPath %>/<%= pictures[i] %>.jpg" class="center-block">
-            <!-- <h3 class="centered"><%= members[i] %></h3> -->
+        <div class="col m-0 p-0 justify-content-center">
+            <header class="d-flex" style="height: 400px;">
+                <div class="mediaOverlay"></div>
+                <img src="/media/<%= picturesPath %>/<%= pictures[i] %>.jpg">
+                <h3 class="centered"><%= members[i] %></h3>
+            </header>
         </div>
         <% } %>
     </div>
+    <!-- End of Members -->
 
-    <div class="row" id="title">
+    <div class="row m-0 p-0" id="title">
         <h2>Albums</h2>
     </div>
 
-    <div class="row align-items-center" id="albums">
+    <div class="row align-items-center m-0 p-0" id="albums">
         <% for (i = 0; i < albums.length; i ++) { %>
         <div class="row">
             <h3>
@@ -56,12 +48,13 @@
         </div>
         <% } %>
     </div>
+    <!-- End of Albums -->
 
-    <div class="row" id="title">
+    <div class="row m-0 p-0" id="title">
         <h2>Locations</h2>
     </div>
 
-    <div class="row align-items-center" id="locations">
+    <div class="row align-items-center m-0 p-0" id="locations">
         <% for (i = 0; i < locations.length; i ++) { %>
         <div class="row">
             <h3>
@@ -70,6 +63,12 @@
         </div>
         <% } %>
     </div>
+    <!-- End of Locations -->
+
+</div>
+<!-- Closing tag for navbar partial template -->
+
+    <div class="overlay"></div>
 
     <% include partials/templates/jsdefaults.ejs %>
 </body>
