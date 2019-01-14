@@ -1,10 +1,10 @@
 
 var express = require("express");
     app = express();
-    // reload = require('reload');
-    // dataFile = require('./data/data.json');
-    // io = require('socket.io')();
+    io = require("socket.io")();
+    reload = require("reload");
 
+app.set("port", 3000);
 app.set("view engine", "ejs");
 app.set("views", "views");
 
@@ -16,8 +16,17 @@ app.use(require("./routes/maroon5"));
 app.use(require("./routes/onerepublic"));
 app.use(require("./routes/feedback"));
 app.use(require("./routes/api"));
-// app.use(require("./routes/chat"));
+app.use(require("./routes/chat"));
 
-app.listen(3000, () => {
-    console.log("running on port 3000")
+var server = app.listen(app.get("port"), () => {
+    console.log("Listening on port 3000...");
 })
+
+io.attach(server);
+io.on('connection', (socket)=>{
+    socket.on('postMessage', (msg)=>{
+        io.emit('updateMessages', msg);
+    })
+})
+
+reload(app);

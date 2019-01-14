@@ -18,14 +18,20 @@
     </header>
     <!-- End of Video Header -->
 
-    <div class="row justify-content-md-center m-0 p-0" id="title">
-        <h2>Members</h2>
+    <!-- <div class="row" style="height: 200px;"></div> -->
+
+    <div class="row m-0 p-0 justify-content-center">
+        <header class="d-flex" style="height: 300px;">
+            <div class="mediaOverlay"></div>
+            <img src="/media/<%= picturesPath %>/<%= picturesPath %>.jpg">
+            <h2>Members</h2>
+        </header>
     </div>
 
     <div class="row m-0 p-0" id="members" style="width: 100%;">
         <% for (i = 0; i < members.length; i ++) { %>
         <div class="col m-0 p-0 justify-content-center">
-            <header class="d-flex" style="height: 400px;">
+            <header class="d-flex" style="height: 550px;">
                 <div class="mediaOverlay"></div>
                 <img src="/media/<%= picturesPath %>/<%= pictures[i] %>.jpg">
                 <h3 class="centered"><%= members[i] %></h3>
@@ -39,7 +45,7 @@
         <h2>Albums</h2>
     </div>
 
-    <div class="row align-items-center m-0 p-0" id="albums">
+    <div class="row align-items-center m-0 p-0" id="albums" style="height: 600px;">
         <% for (i = 0; i < albums.length; i ++) { %>
         <div class="row">
             <h3>

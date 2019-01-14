@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 var data = require('../data/data.json')
 
-router.get('/coldplay', (req, res)=>{
+router.get('/coldplay', (req, res) => {
 
     var coldplay = data.coldplay;
     res.render("layout", {
@@ -16,7 +16,7 @@ router.get('/coldplay', (req, res)=>{
         pageTitle: "Coldplay",
         pageID: "coldplay"
     });
-    
+
 });
 
 module.exports = router;

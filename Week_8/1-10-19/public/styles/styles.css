@@ -4,15 +4,17 @@
     NAVBAR STYLE
 ----------------------------------------------------- */
 
-/* .navbar {
+.navbar {
     position: fixed;
-    width: 100vw;
-    z-index: 3;
-} */
+    /* padding: 15px 10px; */
+    width: 100%;
+    background: #1a1a3f;
+    z-index: 2;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: navy;
+    background: gainsboro;
 }
 
 p {
@@ -31,13 +33,6 @@ a:focus {
     transition: all 0s;
 }
 
-.navbar {
-    /* position: fixed; */
-    /* padding: 15px 10px; */
-    background: navy;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -47,7 +42,7 @@ a:focus {
 .line {
     width: 100%;
     height: 1px;
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px dashed navy;
     margin: 40px 0;
 }
 
@@ -81,11 +76,12 @@ a:focus {
     background: #7386D5;
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 8px;
     cursor: pointer;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    z-index: 4;
 }
 
 #dismiss:hover {
@@ -188,7 +184,7 @@ a.article:hover {
 header {
     position: relative;
     background-color: black;
-    height: 1000px;
+    height: 900px;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
@@ -245,6 +241,10 @@ header .mediaOverlay {
 
 /* Main */
 
+#description {
+    height: 600px;
+}
+
 #title {
     background-color: #001a33;
     height: 200px;
@@ -252,7 +252,7 @@ header .mediaOverlay {
 
 #albums, #locations {
     flex-direction: column;
-    background-color: #000d1a;
+    /* background-color: #000d1a; */
     padding-top: 2%;
     padding-bottom: 2%;
 }
