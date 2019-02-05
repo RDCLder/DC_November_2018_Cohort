@@ -1,0 +1,1 @@
+var myStore = new SequelizeStore
