@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class</title>
+</head>
+<body>
+    
+    Running class test...
+
+    <!-- Redux CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+    <!-- Redux JS -->
+    <script>
+    
+    const initialState = {
+        people: []
+    }
+    
+    // ---------------------------------------------------------------------------------------------------------
+    // ACTION FUNCTIONS
+    // ---------------------------------------------------------------------------------------------------------
+
+    function addPerson(id, name, age) {
+        return {
+            type: "ADD_PERSON",
+            data: {
+                id: id,
+                name: name,
+                age: age
+            }
+        }
+    }
+
+    function removePerson(id) {
+        return {
+            type: "REMOVE_PERSON",
+            data: {
+                id: id
+            }
+        }
+    }
+
+    // ---------------------------------------------------------------------------------------------------------
+    // REDUCER FUNCTION
+    // ---------------------------------------------------------------------------------------------------------
+
+    function reducer(state, action) {
+        if (state === undefined) {
+            state = initialState;
+        }
+
+        switch (action.type) {
+            case "ADD_PERSON":
+                return {
+                    ...state,
+                    people: state.people.concat(action.data)
+                }
+            case "REMOVE_PERSON":
+                return {
+                    ...state,
+                    people: state.people.filter(person => {
+                        return person.id != action.data.id;
+                        // console.log
+                    })
+                }
+            default:
+                return state;
+        }
+    }
+
+    // ---------------------------------------------------------------------------------------------------------
+    // INITIALIZATION
+    // ---------------------------------------------------------------------------------------------------------
+
+    var store = Redux.createStore(reducer);
+    store.subscribe(showState);
+
+    function showState() {
+        console.log(store.getState());
+    }
+
+    store.dispatch(addPerson(1, "Ray Prime", 25));
+    store.dispatch(addPerson(2, "Ray 2", 25));
+    store.dispatch(addPerson(3, "Ray 3", 25));
+    store.dispatch(addPerson(4, "Ray 4", 25));
+    store.dispatch(removePerson(1));
+
+    </script>
+</body>
+</html>

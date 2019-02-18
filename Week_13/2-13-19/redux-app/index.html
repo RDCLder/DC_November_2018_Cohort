@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Redux App</title>
+</head>
+
+<body>
+
+    Testing
+
+    <!-- Redux CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+
+    <!-- Redux Script -->
+    <script>
+
+        // Initial State
+        const initialState = {
+            people: []
+        }
+
+        // Actions
+        function addPerson(id, name, age) {
+            return {
+                type: "ADD",
+                data: {
+                    id: id,
+                    name: name,
+                    age: age
+                }
+            }
+        }
+
+        function removePerson(id) {
+            return {
+                type: "REMOVE",
+                id: id
+            }
+        }
+
+        // Reducer
+        function reducer(state, action) {
+            if (state === undefined) {
+                state = initialState;
+            }
+
+            switch (action.type) {
+                case "ADD":
+                    let person = {
+                        id: action.data.id,
+                        name: action.data.name,
+                        age: action.data.age
+                    };
+                    return {
+                        ...state,
+                        people: state.people.concat(person)
+                    }
+                case "REMOVE":
+                    return {
+                        ...state,
+                        people: state.people.filter(person => {
+                            return person.id != action.data.id
+                        })
+                    }
+                default:
+                    return state;
+            }
+        }
+
+        var store = Redux.createStore(reducer);
+
+        store.subscribe(showState)
+
+        function showState() {
+            console.log(store.getState());
+        }
+
+        store.dispatch(addPerson(1, "Ray", 25));
+        store.dispatch(addPerson(2, "Erick", 24));
+        store.dispatch(addPerson(3, "Phong", 24));
+        store.dispatch(addPerson(4, "Anuj", 25));
+        store.dispatch(addPerson(5, "Kevin Bacon", 50));
+
+
+    </script>
+    <!-- End of Redux Script -->
+</body>
+
+</html>
