@@ -1,0 +1,21 @@
+
+.float-right {
+    float: right;
+}
+
+.productRow {
+    padding: 2%;
+}
+
+.productRow:nth-child(even) {
+    background: gainsboro;
+}
+
+p {
+    padding: 0;
+    margin: auto;
+}
+
+.addCartButton {
+    float: right;
+}
